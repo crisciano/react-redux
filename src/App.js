@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 
 function App() {
   const [ name, setName ] = useState('');
   const [ items, setItems ] = useState([])
   const [ title ] = useState('React redux')
+  const inputRef = useRef(null)
 
   useEffect( () => {
     document.title = title
@@ -19,8 +20,11 @@ function App() {
     setName('')
   }
   function removeItem(id){
-    console.log(id);
     setItems(items.filter( item => item.id !== id ))
+  }
+
+  function inputFocus(){
+    inputRef.current.focus();
   }
 
   return (
@@ -28,8 +32,10 @@ function App() {
       <header className="App-header">
         <label>Name</label>
         <input 
+          ref={inputRef}
           value={name}  
           onChange={handleChangeName} 
+          onClick={inputFocus}
         /> 
         {/* <p> {name} </p> */}
         <button onClick={() => addItem(name)} > Salve </button>
