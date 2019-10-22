@@ -19,6 +19,7 @@ function App() {
     setItems([ ...items, { id: items.length + 1, name: item }])
     setName('')
   }
+
   function removeItem(id){
     setItems(items.filter( item => item.id !== id ))
   }
@@ -37,7 +38,7 @@ function App() {
           onChange={handleChangeName} 
           onClick={inputFocus}
         /> 
-        {/* <p> {name} </p> */}
+        {/* <p> {newItems} </p> */}
         <button onClick={() => addItem(name)} > Salve </button>
         <ul>
           {
