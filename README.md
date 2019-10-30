@@ -5,19 +5,25 @@ Create simple app in react and redux
 ## 1° step
 
 Create new project react
-    `npx create-react-app react-redux`
-    `cd react-redux`
-    `yarn start` 
+~~~javascript
+    npx create-react-app react-redux
+    cd react-redux
+    yarn start
+~~~
 
 Install redux and react-redux,
-    `yarn add redux`
-    `yarn add react-redux`
+~~~javascript
+    yarn add redux
+    yarn add react-redux
+~~~
 
 ## 2° step
 
 Alter `index.js` recever provider
-`import { Provider } from 'react-redux'`
-`import { Store } from './store'`
+~~~javascript
+    import { Provider } from 'react-redux'
+    import { Store } from './store'
+~~~
 
 Alter ReactDOM.render
 
