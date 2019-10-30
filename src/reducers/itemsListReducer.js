@@ -1,10 +1,12 @@
+import { UPDATE_ITEMS } from '../actions/actionsTypes'
+
 const initialState ={ 
   items : []
 }
 
 export const itemsListReducer = ( state = initialState, action) => {
   switch (action.type){
-    case 'LIST_ITEMS':
+    case UPDATE_ITEMS:
       return {
         ...state,
         items: action.items
