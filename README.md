@@ -119,7 +119,7 @@ Create mapDispatchToProps
 ~~~javascript
     const mapDispatchToProps = dispatch => 
         bindActionCreators({ listItems }, dispatch)
-~~~javascript
+~~~
 
 In the project directory, you can run:
 
